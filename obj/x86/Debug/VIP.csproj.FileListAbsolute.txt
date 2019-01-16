@@ -1,0 +1,2 @@
+F:\Black Horse Programmer Information\QQ音乐项目\13.VIP\obj\x86\Debug\VIP.csprojAssemblyReference.cache
+F:\Black Horse Programmer Information\QQ音乐项目\13.VIP\obj\x86\Debug\VIP.csproj.CoreCompileInputs.cache
