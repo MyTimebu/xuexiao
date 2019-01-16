@@ -212,6 +212,15 @@ $('.cebianlan>ul>li').eq(0).mouseenter(function () {
 $(window).scroll(function () {
     var v = $(this).scrollTop();
     console.log(v)
+   
+    if (v > 600) {
+        $('.one').css('position', 'fixed')
+        //删除样式
+        $('.lv ').fadeOut(1500, 'linear')
+        $('.cheng').fadeOut(3000, 'linear')
+        $('.xian').fadeOut(500, 'linear')
+       
+    }
     if (v > 800) {
        
         $('.biejing ').fadeIn(3000,'linear')
@@ -222,7 +231,18 @@ $(window).scroll(function () {
         $('.zhuiqiu').fadeIn(2000, 'linear')
         $('.tubiao ').fadeIn(4000, 'linear')
     }
+     //删除样式
+    if (v < 800) {
+        $('.bujiang').fadeOut(500, 'linear')
+        $('.zhuiqiu').fadeOut(2000, 'linear')
+        $('.tubiao ').fadeOut(4000, 'linear')
+    }
     if (v > 2250) {
+        //删除样式
+        $('.biejing ').fadeOut(3000, 'linear')
+        $('.biejing_1 ').fadeOut(1500, 'linear')
+       
+        //设置样式
         $('.lanse').fadeIn(1500, 'linear')
         $('.lvse').fadeIn(500, 'linear')
         $('.hongse').fadeIn(3000, 'linear')
@@ -232,8 +252,19 @@ $(window).scroll(function () {
         $('.dingzhi ').animate({ height: 70, }, 4000)
         $('.gexing ').fadeIn(5000, 'linear')
     }
+      //删除样式
+    if (v < 2250) {
+        $('.zaiyiqi').animate({ width: 0, }, 2000)
+        $('.dingzhi ').animate({ height: 0, }, 4000)
+        $('.gexing ').fadeOut(5000, 'linear')
+    }
     if (v > 2800) {
-       
+        //删除样式
+        $('.lanse').fadeOut(1500, 'linear')
+        $('.lvse').fadeOut(500, 'linear')
+        $('.hongse').fadeOut(3000, 'linear')
+        
+        //设置样式
             $('.jing').fadeIn(800, 'linear')
     }
     if (v > 3300) {
@@ -242,5 +273,39 @@ $(window).scroll(function () {
     }
     if (v > 3600) {
         $('.wo ').fadeIn(4000,'linear')
+    }
+      //删除样式
+    if(v<3300){
+        $('.wo ').fadeOut(4000, 'linear')
+    }
+    if (v > 4100) {
+        //删除样式
+        $('.jing').fadeOut(800, 'linear')
+        $('.yanse').fadeOut(1800, 'linear')
+        $('.shuang').fadeOut(2800, 'linear')
+       
+        //设置样式
+        $('.lv ').fadeIn(1500, 'linear')
+        $('.cheng').fadeIn(3000, 'linear')
+
+    }
+    if (v > 4500) {
+        $('.xian').fadeIn(500,'linear')
+    }
+    if (v > 4600) {
+        $('.rangni').fadeIn(1000, 'linear')
+        $('.xuanxiao').animate({
+            width: 698,
+        },2000,)
+        $('.kongjian ').animate({
+            height:115,
+        },4000,)
+    }
+      //删除样式
+    if(v<4500){
+        $('.rangni').fadeOut(1000, 'linear')
+        $('.xuanxiao').animate({
+            width: 0,
+        }, 2000)
     }
 })
