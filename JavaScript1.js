@@ -231,12 +231,7 @@ $(window).scroll(function () {
         $('.zhuiqiu').fadeIn(2000, 'linear')
         $('.tubiao ').fadeIn(4000, 'linear')
     }
-     //删除样式
-    if (v < 800) {
-        $('.bujiang').fadeOut(500, 'linear')
-        $('.zhuiqiu').fadeOut(2000, 'linear')
-        $('.tubiao ').fadeOut(4000, 'linear')
-    }
+    
     if (v > 2250) {
         //删除样式
         $('.biejing ').fadeOut(3000, 'linear')
@@ -247,17 +242,12 @@ $(window).scroll(function () {
         $('.lvse').fadeIn(500, 'linear')
         $('.hongse').fadeIn(3000, 'linear')
     }
-    if (v > 2500) {
+    if (v > 2200) {
         $('.zaiyiqi').animate({ width: 435, }, 2000)
         $('.dingzhi ').animate({ height: 70, }, 4000)
         $('.gexing ').fadeIn(5000, 'linear')
     }
-      //删除样式
-    if (v < 2250) {
-        $('.zaiyiqi').animate({ width: 0, }, 2000)
-        $('.dingzhi ').animate({ height: 0, }, 4000)
-        $('.gexing ').fadeOut(5000, 'linear')
-    }
+   
     if (v > 2800) {
         //删除样式
         $('.lanse').fadeOut(1500, 'linear')
@@ -271,7 +261,7 @@ $(window).scroll(function () {
         $('.yanse').fadeIn(1800, 'linear')
         $('.shuang').fadeIn(2800, 'linear')
     }
-    if (v > 3600) {
+    if (v > 3400) {
         $('.wo ').fadeIn(4000,'linear')
     }
       //删除样式
@@ -302,10 +292,64 @@ $(window).scroll(function () {
         },4000,)
     }
       //删除样式
-    if(v<4500){
-        $('.rangni').fadeOut(1000, 'linear')
-        $('.xuanxiao').animate({
-            width: 0,
-        }, 2000)
+    if (v < 800) {
+        $('.bujiang').fadeOut(500, 'linear')
+        $('.zhuiqiu').fadeOut(2000, 'linear')
+        $('.tubiao ').fadeOut(4000, 'linear')
     }
+
+   
+
+    if (v < 4500) {
+        $('.rangni').fadeOut(1000, 'linear')
+       
+    }
+    
+   //设置小点样式
+    if (v < 800) {
+        $('.name>ul>li').removeClass('yangshi')
+        $('.name>ul>li').eq(0).addClass('yangshi')
+    }
+    
+
+    if (v > 900 && v < 2000) {
+        $('.name>ul>li').removeClass('yangshi')
+        $('.name>ul>li').eq(1).addClass('yangshi')
+    }
+    
+
+    if (v > 2000 && v < 3000) {
+        $('.name>ul>li').removeClass('yangshi')
+        $('.name>ul>li').eq(2).addClass('yangshi')
+    }
+    
+
+    if (v > 3000 && v < 4200) {
+        $('.name>ul>li').removeClass('yangshi')
+        $('.name>ul>li').eq(3).addClass('yangshi')
+    }
+    if (v > 4200 && v <= 4800) {
+        $('.name>ul>li').removeClass('yangshi')
+        $('.name>ul>li').eq(4).addClass('yangshi')
+    }
+})
+//点击事件
+$('.name>ul>li').eq(0).click(function () {
+    $(window).scrollTop(0);
+})
+
+$('.name>ul>li').eq(1).click(function () {
+    $(window).scrollTop(1300);
+})
+
+$('.name>ul>li').eq(2).click(function () {
+    $(window).scrollTop(2400);
+})
+
+$('.name>ul>li').eq(3).click(function () {
+    $(window).scrollTop(3500);
+})
+
+$('.name>ul>li').eq(4).click(function () {
+    $(window).scrollTop(4600);
 })

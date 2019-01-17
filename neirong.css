@@ -794,3 +794,30 @@
   right: 73px;
   display: none;
 }
+.name {
+  width: 20px;
+  height: 150px;
+  position: fixed;
+  top: 120px;
+  right: 32px;
+}
+.name ul li:hover {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: #edff00;
+}
+.name ul li {
+  width: 10px;
+  height: 10px;
+  margin-bottom: 10px;
+  border-radius: 50%;
+  border: 1px #57dc31 solid;
+}
+.yangshi {
+  width: 15px !important;
+  height: 15px !important;
+  border-radius: 50% !important;
+  background-color: #edff00 !important;
+}
