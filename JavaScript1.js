@@ -279,7 +279,7 @@ $(window).scroll(function () {
         $('.cheng').fadeIn(3000, 'linear')
 
     }
-    if (v > 4500) {
+    if (v > 4300) {
         $('.xian').fadeIn(500,'linear')
     }
     if (v > 4600) {
