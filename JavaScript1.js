@@ -300,7 +300,7 @@ $(window).scroll(function () {
 
    
 
-    if (v < 4500) {
+    if (v < 4000) {
         $('.rangni').fadeOut(1000, 'linear')
        
     }
