@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录/注册</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico"/>
+    <link rel="stylesheet" media="screen" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+</head>
+<body style="background-color:#000;">
+    <!-- 背景div -->
+    <div id="mydiv" style="width: 1350px;height:650px;">
+        
+            <div class="login" id="one" style="background-color:rgba(0, 0, 0, 0.00)!important;box-shadow:none !important;">
+                <div class="login-top" style="border:none !important;color:deepskyblue">
+                    QQ登录
+                </div>
+                <div class="login-center clearfix" style="border:none!important;">
+                    <div class="login-center-img"style="border:none!important;"><img src="img/name.png" /></div>
+                    <div class="login-center-input"style="border:none!important;">
+                        <input oninput = "value=value.replace(/[^\d]/g,'')" id="zhanghao" type="text" name="" value="" placeholder="请输入QQ账号" onfocus="this.placeholder=''" onblur="this.placeholder='请输入您的QQ账号'" style="background-color:rgba(0, 0, 0, 0.81);color:deepskyblue"/>
+                        <div class="login-center-input-text"style="border:none!important;">QQ账号</div>
+                    </div>
+                </div>
+                <div class="login-center clearfix"style="border:none!important;">
+                    <div class="login-center-img"style="border:none!important;"><img src="img/password.png" /></div>
+                    <div class="login-center-input"style="border:none!important;">
+                        <input id="mima" style="background-color:rgba(0, 0, 0, 0.81)" type="password" name="" value="" placeholder="请输入您的QQ密码" onfocus="this.placeholder=''" onblur="this.placeholder='请输入您的QQ密码'" />
+                        <div class="login-center-input-text">密码</div>
+                    </div>
+                </div>
+                <div id="panduan" class="login-button"style="border:none!important;margin-left:54px;">
+                    登陆
+                </div>
+                <div class="login-button" id="QQ" style="height:40px;margin-top:10px;margin-left:54px;">
+                       还没有账号，点我注册！
+                    </div>
+            </div>
+            
+       
+    </div>
+    <script type="text/javascript">
+		window.onload = function() {
+		    //配置
+		    var config = {
+		        vx: 4,	//小球x轴速度,正为右，负为左
+		        vy: 4,	//小球y轴速度
+		        height: 2,	//小球高宽，其实为正方形，所以不宜太大
+		        width: 2,
+		        count: 150,		//点个数
+		        color: "121, 162, 185", 	//点颜色
+		        stroke: "130,255,255", 		//线条颜色
+		        dist: 6000, 	//点吸附距离
+		        e_dist: 20000, 	//鼠标吸附加速距离
+		        max_conn: 12 	//点到点最大连接数
+		    }
+
+		    //调用
+		    CanvasParticle(config);
+		}
+    </script>
+
+    <script type="text/javascript" src="canvas-particle.js"></script>
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        var zhanghao=document.querySelector('#zhanghao')
+        var mima=document.querySelector('#mima')
+        $('#panduan').click(function(){
+            if (zhanghao.value.trim() === '' || mima.value.trim() === '') {
+            alert('请正确输入')
+            return
+            }   
+           
+            //确认阶段
+            $('#one').css('display','none')
+            setTimeout(function(){
+                $('#one').css('display','block')
+                window.location.href="http://www.baidu.com";
+            },5000)
+            zhanghao.value='';
+            mima.value='';
+        })
+        $('#QQ').click(function(){
+            window.location.href="https://ssl.zc.qq.com/v3/index-chs.html";
+        })
+    </script>
+</body>
+</html>
