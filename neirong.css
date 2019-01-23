@@ -111,7 +111,6 @@
 .one .logo_2 span:nth-child(2)>a:hover {
   text-decoration: underline;
   text-decoration-color: #31c27c;
-  cursor: pointer;
 }
 .logo_3 {
   width: 100%;
